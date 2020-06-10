@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 // variables
@@ -87,7 +88,7 @@ func main() {
 	intMap["aa"] = 1324
 	intMap["aa"] = 223
 	intMap["bb"] = 3553
-	fmt.Println(intMap)
+	fmt.Println(strconv.Itoa(1323))
 
 	strMap["cc"] = "aaaa"
 	strMap["cc"] = "fwewf"
@@ -98,11 +99,11 @@ func main() {
 	fmt.Println(strMap2)
 
 	// ------------------------------
-	// likes := []string{}
-	// likes = append(likes, "few")
-	// likes = append(likes, "dwffe")
-	// likes = append(likes, "fwf")
-	// fmt.Println(likes)
+	likes := []string{}
+	likes = append(likes, "few")
+	likes = append(likes, "dwffe")
+	likes = append(likes, "fwf")
+	fmt.Println(likes)
 	// ------------------------------
 	// person1 := Introduce("Jack", 13, []string{"aaa", "bbbbbb", "ccc"})
 	// person2 := Introduce("Sam", 17, []string{"wwr", "frfr", "cclckclk", "efg"})
@@ -111,4 +112,15 @@ func main() {
 	// person1.Shout(&person2)
 	// fmt.Println(person1, person2)
 
+	list := []int8{}
+	list = append(list, 3)
+	list = append(list, 12)
+	list = append(list, -7)
+	list = append(list, -2)
+	list = append(list, 14)
+	list = append(list, 6)
+	fmt.Println(list)
+	removeIndex := 2
+	list = append(list[:removeIndex], list[removeIndex+1:]...)
+	fmt.Println(list)
 }
